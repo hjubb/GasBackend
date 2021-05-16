@@ -1,0 +1,21 @@
+[package]
+name = "gas-backend"
+version = "0.1.0"
+authors = ["Harris <hjubb@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.7"
+serde = { version = "1.0.126", features = ["derive"] }
+reqwest = { version = "0.11", features = ["json", "blocking"] }
+tokio = { version = "1", features = ["full"] }
+cached = "0.23.0"
+clokwerk = "0.3.5"
+load-dotenv = "0.1.2"
+
+[dependencies.rocket_contrib]
+version = "0.4.7"
+default-features = false
+features = ["json"]
